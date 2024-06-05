@@ -73,6 +73,7 @@ class Attestation:
             return False
 
         token_payload = data.get("tokenPayloadExternal", {})
+        log.debug(token_payload)
         verdicts = []
         # check package name
         request_details = token_payload.get("requestDetails", {})
